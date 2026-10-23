@@ -1,7 +1,7 @@
 <!-- Secao 2: Chef Eduardo (Cozinha Autoral e Persona) -->
-<section id="chef" class="py-28 px-6 bg-dark border-t border-neutral-900 gsap-fade-section relative">
-    <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
-        <!-- Coluna da Foto do Chef: Enquadramento Nobre com Revelacao de Cores no Hover -->
+<section id="chef" class="py-20 sm:py-24 lg:py-28 px-6 sm:px-8 bg-dark border-t border-neutral-900 gsap-fade-section relative overflow-hidden">
+    <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <!-- Coluna da Foto do Chef: Enquadramento Nobre com Revelação de Cores no Hover -->
         <div class="lg:col-span-5 gsap-fade-item">
             <div class="relative p-3 border border-gold/50 bg-gradient-to-b from-[#1c1f26] to-dark-card shadow-2xl rounded-sm group">
                 <!-- Brilho dourado ambiental de fundo -->
@@ -12,7 +12,7 @@
                     <img 
                         src="<?php echo esc_url(markitos_doro_get_chef_image()); ?>" 
                         alt="Chef Eduardo preparando massa fresca na cozinha autêntica do Markitos D'Oro" 
-                        class="chef-portrait-img w-full h-[520px] object-cover object-center grayscale contrast-125 group-hover:grayscale-0 group-hover:contrast-105 group-hover:scale-105 transition-all duration-700 ease-out"
+                        class="chef-portrait-img w-full h-[440px] sm:h-[480px] lg:h-[520px] object-cover object-center grayscale contrast-125 group-hover:grayscale-0 group-hover:contrast-105 group-hover:scale-105 transition-all duration-700 ease-out"
                         loading="lazy"
                     >
                     <!-- Gradiente sutil inferior -->
@@ -62,8 +62,8 @@
                 </span>
             </blockquote>
 
-            <!-- Selos de Maestria -->
-            <div class="pt-2 flex flex-wrap gap-2.5">
+            <!-- Selos de Maestria com Espaçamento Nobre -->
+            <div class="pt-4 pb-2 flex flex-wrap gap-2.5">
                 <span class="luxury-badge">Pasta Fresca Fatta a Mano</span>
                 <span class="luxury-badge">Mestre dos Tartufos de Norcia</span>
                 <span class="luxury-badge">Cozinha Autoral Siciliana</span>

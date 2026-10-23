@@ -1,10 +1,10 @@
 <!-- Secao 3: Cardapio Autoral com Fotos de Alta Gastronomia -->
-<section id="menu" class="py-28 px-6 sm:px-8 lg:px-12 bg-[#0E1013] border-t border-neutral-900 gsap-fade-section">
+<section id="menu" class="py-24 sm:py-28 px-6 sm:px-8 lg:px-12 bg-[#0E1013] border-t border-neutral-900 gsap-fade-section">
     <div class="max-w-7xl mx-auto space-y-16">
         <!-- Cabecalho Editorial do Cardapio -->
         <div class="text-center space-y-4 max-w-2xl mx-auto gsap-fade-item">
             <span class="text-gold tracking-[0.3em] uppercase text-xs font-semibold block">Gastronomia de Origem</span>
-            <h2 class="font-serif text-4xl sm:text-5xl font-bold text-cream">Cardápio Autoral & Seleção do Chef</h2>
+            <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-cream">Cardápio Autoral & Seleção do Chef</h2>
             <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed">
                 Pratos preparados diariamente em pequenas levas pelo Chef Eduardo. Cada receita homenageia a alta qualidade dos insumos importados com certificação italiana.
             </p>
@@ -16,13 +16,13 @@
                 <!-- Foto do Prato Assinatura -->
                 <div class="lg:col-span-5 relative overflow-hidden rounded-sm group">
                     <img 
-                        src="https://images.unsplash.com/photo-1621996346565-e3d5d6281084?auto=format&fit=crop&w=1200&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('tagliolini-tartufo', 'https://images.unsplash.com/photo-1642354609876-5386fea5e7fc?auto=format&fit=crop&w=1200&q=80')); ?>" 
                         alt="Tagliolini al Tartufo Negro fresco - Prato Assinatura Markitos D'Oro" 
-                        class="w-full h-80 lg:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
+                        class="w-full h-72 sm:h-80 lg:h-96 object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                         loading="lazy"
                     >
                     <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div>
-                    <span class="absolute bottom-4 left-4 bg-black/80 border border-gold/40 text-gold text-[10px] uppercase tracking-widest font-bold px-3 py-1">
+                    <span class="absolute bottom-4 left-4 bg-black/85 border border-gold/40 text-gold text-[10px] uppercase tracking-widest font-bold px-3 py-1">
                         Massa Fresca Fatta a Mano
                     </span>
                 </div>
@@ -84,13 +84,13 @@
             </button>
         </div>
 
-        <!-- Grade de Pratos COM FOTOGRAFIAS GASTRONÔMICAS -->
+        <!-- Grade de Pratos COM FOTOGRAFIAS GASTRONÔMICAS LOCAIS E AUTÊNTICAS -->
         <div id="menu-dishes-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- 1. Burrata Pugliese -->
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="antipasti">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1592417817098-8f3d6910985b?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('burrata-pugliese')); ?>" 
                         alt="Burrata Pugliese con San Daniele" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -104,7 +104,7 @@
                             <span class="text-gold font-serif text-base font-bold whitespace-nowrap">R$ 86</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                            Coração cremoso de burrata levemente fumada, presunto cru San Daniele curado 24 meses, tomatinhos confitados em azeite siciliano e focaccia quente.
+                            Coração cremoso de burrata fresca da Puglia, presunto cru San Daniele curado 24 meses, tomatinhos confitados em azeite siciliano e focaccia quente de fermentação natural.
                         </p>
                     </div>
                     <span class="text-[11px] text-gold/80 font-serif pt-2 block border-t border-neutral-900">
@@ -117,7 +117,7 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="antipasti">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('carpaccio-manzo')); ?>" 
                         alt="Carpaccio di Manzo Stagionato" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -144,7 +144,7 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="primi">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('spaghetti-pomodoro')); ?>" 
                         alt="Spaghetti Tradizionale al Pomodoro San Marzano" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -171,7 +171,7 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="primi">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1587740408447-196191b7d5bf?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('ravioli-ricotta')); ?>" 
                         alt="Ravioli di Ricotta e Limone di Siracusa" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -185,7 +185,7 @@
                             <span class="text-gold font-serif text-base font-bold whitespace-nowrap">R$ 92</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                            Massa recheada com ricota fresca de ovelha siciliana e raspas de limão-siciliano, finalizada na manteiga de sálvia dourada e amêndoas tostadas.
+                            Massa fresca recheada com ricota artesanal de ovelha siciliana e raspas de limão-siciliano de Siracusa, finalizada na manteiga de sálvia dourada e amêndoas tostadas.
                         </p>
                     </div>
                     <span class="text-[11px] text-gold/80 font-serif pt-2 block border-t border-neutral-900">
@@ -198,7 +198,7 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="secondi">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1633964913295-ceb43826e7c9?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('ossobuco-risotto')); ?>" 
                         alt="Ossobuco alla Milanese con Risotto allo Zafferano" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -212,7 +212,7 @@
                             <span class="text-gold font-serif text-base font-bold whitespace-nowrap">R$ 138</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                            Vitela braseada por 8 horas em redução aromática de vinho tinto siciliano e ervas frescas, acompanhada de risotto aveludado de açafrão em pistilos.
+                            Vitela braseada lentamente por 8 horas em redução aromática de vinho tinto siciliano e ervas frescas, acompanhada de risotto aveludado de açafrão em pistilos.
                         </p>
                     </div>
                     <span class="text-[11px] text-gold/80 font-serif pt-2 block border-t border-neutral-900">
@@ -221,11 +221,11 @@
                 </div>
             </div>
 
-            <!-- 6. Filetto di Spigola -->
+            <!-- 6. Spigola in Crosta di Pistacchio -->
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="secondi">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('spigola-pistacchio')); ?>" 
                         alt="Filetto di Spigola in Crosta di Pistacchio" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -239,7 +239,7 @@
                             <span class="text-gold font-serif text-base font-bold whitespace-nowrap">R$ 132</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                            Robalo fresco grelhado em crosta estaladiça de pistácios de Bronte, emulsão cítrica de laranja siciliana e purê rústico de batatas trufadas.
+                            Robalo branco nobre selado na frigideira com crosta estaladiça de pistácios de Bronte, emulsão cítrica de laranja siciliana e purê rústico de batatas trufadas.
                         </p>
                     </div>
                     <span class="text-[11px] text-gold/80 font-serif pt-2 block border-t border-neutral-900">
@@ -252,12 +252,12 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="dolci">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('cannolo-siciliano')); ?>" 
                         alt="Cannolo Siciliano D'Oro con Foglia d'Oro" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
                     >
-                    <span class="absolute top-3 left-3 luxury-tag">Ouro 24k</span>
+                    <span class="absolute top-3 left-3 luxury-tag">Sicília 1936</span>
                 </div>
                 <div class="p-6 space-y-3 flex-1 flex flex-col justify-between">
                     <div class="space-y-2">
@@ -266,7 +266,7 @@
                             <span class="text-gold font-serif text-base font-bold whitespace-nowrap">R$ 52</span>
                         </div>
                         <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                            Casquinha estaladiça com infusão de vinho Marsala, recheada na hora com ricota de ovelha aveludada, raspas de laranja cristalizada e folha de ouro comestível 24k.
+                            Casquinha tradicional estaladiça com infusão de vinho Marsala, recheada na hora com ricota de ovelha aveludada, raspas de laranja cristalizada e pistache siciliano.
                         </p>
                     </div>
                     <span class="text-[11px] text-gold/80 font-serif pt-2 block border-t border-neutral-900">
@@ -279,7 +279,7 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="dolci">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('tiramisu-tradizionale')); ?>" 
                         alt="Tiramisù Tradizionale al Mascarpone" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -306,7 +306,7 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="vini">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('barolo-docg')); ?>" 
                         alt="Barolo DOCG Pio Cesare" 
                         class="w-full h-full object-cover" 
                         loading="lazy"
@@ -333,7 +333,7 @@
             <div class="menu-dish-card dish-card border border-neutral-800/90 rounded-sm overflow-hidden flex flex-col justify-between" data-category="vini">
                 <div class="relative overflow-hidden aspect-[16/10]">
                     <img 
-                        src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" 
+                        src="<?php echo esc_url(markitos_doro_get_dish_image('negroni-doro')); ?>" 
                         alt="Negroni D'Oro Riserva" 
                         class="w-full h-full object-cover" 
                         loading="lazy"

@@ -3,7 +3,7 @@
  * Markitos D'Oro - Funcoes e Definicoes do Tema
  *
  * @package Markitos_DOro
- * @version 1.1.0
+ * @version 1.4.0
  */
 
 if (!defined('ABSPATH')) {
@@ -15,11 +15,11 @@ if (!defined('ABSPATH')) {
  */
 function markitos_doro_enqueue_scripts() {
     // 1. Folha de estilos padrao do tema
-    wp_enqueue_style('markitos-doro-theme-style', get_stylesheet_uri(), array(), '1.1.0');
+    wp_enqueue_style('markitos-doro-theme-style', get_stylesheet_uri(), array(), '1.4.0');
 
     // 2. Estilos personalizados complementares
     if (file_exists(get_template_directory() . '/assets/css/custom.css')) {
-        wp_enqueue_style('markitos-doro-custom-css', get_template_directory_uri() . '/assets/css/custom.css', array('markitos-doro-theme-style'), '1.1.0');
+        wp_enqueue_style('markitos-doro-custom-css', get_template_directory_uri() . '/assets/css/custom.css', array('markitos-doro-theme-style'), '1.4.0');
     }
 
     // 3. Google Fonts: Playfair Display + Plus Jakarta Sans + Cinzel Decorative
@@ -42,10 +42,10 @@ function markitos_doro_enqueue_scripts() {
 
     // 7. Scripts proprios de animacao e controle de interface
     if (file_exists(get_template_directory() . '/assets/js/animations.js')) {
-        wp_enqueue_script('markitos-doro-animations', get_template_directory_uri() . '/assets/js/animations.js', array('gsap', 'gsap-scrolltrigger', 'lenis'), '1.1.0', true);
+        wp_enqueue_script('markitos-doro-animations', get_template_directory_uri() . '/assets/js/animations.js', array('gsap', 'gsap-scrolltrigger', 'lenis'), '1.4.0', true);
     }
     if (file_exists(get_template_directory() . '/assets/js/main.js')) {
-        wp_enqueue_script('markitos-doro-main', get_template_directory_uri() . '/assets/js/main.js', array('lenis'), '1.1.0', true);
+        wp_enqueue_script('markitos-doro-main', get_template_directory_uri() . '/assets/js/main.js', array('lenis'), '1.4.0', true);
     }
 }
 add_action('wp_enqueue_scripts', 'markitos_doro_enqueue_scripts');
@@ -81,8 +81,8 @@ function markitos_doro_get_chef_image() {
     $theme_uri = get_template_directory_uri();
 
     $candidates = array(
-        '/assets/images/chef-eduardo.jfif',
         '/assets/images/chef-eduardo.jpg',
+        '/assets/images/chef-eduardo.jfif',
         '/assets/chef-eduardo.jpg',
         '/Gemini_Generated_Image_1kr4so1kr4so1kr4.jfif',
     );
@@ -93,8 +93,25 @@ function markitos_doro_get_chef_image() {
         }
     }
 
-    // Fallback para URL na raiz caso o arquivo exista remotamente
-    return $theme_uri . '/Gemini_Generated_Image_1kr4so1kr4so1kr4.jfif';
+    return $theme_uri . '/assets/images/chef-eduardo.jpg';
+}
+
+/**
+ * Helper para obter imagens de pratos com suporte a arquivos locais otimizados e fallbacks
+ */
+function markitos_doro_get_dish_image($slug, $fallback_url = '') {
+    $theme_dir = get_template_directory();
+    $theme_uri = get_template_directory_uri();
+
+    $extensions = array('jpg', 'jpeg', 'png', 'webp');
+    foreach ($extensions as $ext) {
+        $rel_path = '/assets/images/dishes/' . $slug . '.' . $ext;
+        if (file_exists($theme_dir . $rel_path)) {
+            return $theme_uri . $rel_path;
+        }
+    }
+
+    return !empty($fallback_url) ? $fallback_url : $theme_uri . '/assets/images/dishes/tagliolini-tartufo.jpg';
 }
 
 /**
