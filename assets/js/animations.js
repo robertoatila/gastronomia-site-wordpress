@@ -1,36 +1,55 @@
 /**
- * Markitos D'Oro - Motor de Animacoes GSAP + Lenis + Cursor Magnetico
+ * Markitos D'Oro - Motor de Animacoes GSAP + Lenis Otimizado
  */
 document.addEventListener('DOMContentLoaded', function () {
-  // 1. Inicializacao do Lenis Smooth Scroll
-  let lenisInstance = null;
+  // 1. Inicializacao do Lenis Smooth Scroll Fluido (Sem travamentos)
+  let lenis = null;
   if (typeof Lenis !== 'undefined') {
-    lenisInstance = new Lenis({
-      duration: 1.25,
+    lenis = new Lenis({
+      duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: 'vertical',
+      gestureOrientation: 'vertical',
       smoothWheel: true,
-      wheelMultiplier: 0.95,
-      touchMultiplier: 1.5,
+      wheelMultiplier: 1.0,
+      touchMultiplier: 1.8,
+      infinite: false,
     });
 
     function raf(time) {
-      lenisInstance.raf(time);
+      lenis.raf(time);
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
 
     // Integracao Lenis com GSAP ScrollTrigger
-    if (typeof ScrollTrigger !== 'undefined') {
-      lenisInstance.on('scroll', ScrollTrigger.update);
+    if (typeof ScrollTrigger !== 'undefined' && typeof gsap !== 'undefined') {
+      lenis.on('scroll', ScrollTrigger.update);
       gsap.ticker.add((time) => {
-        lenisInstance.raf(time * 1000);
+        lenis.raf(time * 1000);
       });
       gsap.ticker.lagSmoothing(0);
     }
+
+    // Rolagem Suave para Links Internos (#historia, #chef, #menu, #reservas)
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', function (e) {
+        const targetId = this.getAttribute('href');
+        if (targetId && targetId !== '#') {
+          const targetEl = document.querySelector(targetId);
+          if (targetEl) {
+            e.preventDefault();
+            lenis.scrollTo(targetEl, {
+              offset: -75,
+              duration: 1.2,
+            });
+          }
+        }
+      });
+    });
   }
 
-  // 2. Custom Gold Follower Cursor
+  // 2. Custom Gold Follower Cursor (Com deteccao precisa)
   const cursor = document.getElementById('custom-cursor');
   const cursorDot = document.getElementById('custom-cursor-dot');
 
@@ -48,15 +67,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function animateCursor() {
-      cursorX += (mouseX - cursorX) * 0.18;
-      cursorY += (mouseY - cursorY) * 0.18;
+      cursorX += (mouseX - cursorX) * 0.22;
+      cursorY += (mouseY - cursorY) * 0.22;
       cursor.style.left = `${cursorX}px`;
       cursor.style.top = `${cursorY}px`;
       requestAnimationFrame(animateCursor);
     }
     requestAnimationFrame(animateCursor);
 
-    // Efeito hover nos elementos interativos
+    // Expansao magnetica em elementos interativos
     const hoverElements = document.querySelectorAll('a, button, .interactive-hover, .gold-glow-card, input, select, textarea');
     hoverElements.forEach((el) => {
       el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
@@ -64,50 +83,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  // 3. Animacoes GSAP de Revelacao e ScrollTrigger
+  // 3. Revelacoes Cinemáticas GSAP
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Revelacao suave do Hero
+    // Revelacao inicial do Hero
     gsap.from('.hero-reveal', {
       opacity: 0,
-      y: 40,
-      stagger: 0.18,
-      duration: 1.2,
+      y: 35,
+      stagger: 0.15,
+      duration: 1.0,
       ease: 'power3.out',
-      delay: 0.2,
+      delay: 0.1,
     });
 
-    // Seletor geral de secoes para animacao fade-up ao rolar
+    // Secoes com efeito Fade-Up no Scroll
     const animatedSections = document.querySelectorAll('.gsap-fade-section');
     animatedSections.forEach((section) => {
       gsap.from(section.querySelectorAll('.gsap-fade-item'), {
         scrollTrigger: {
           trigger: section,
-          start: 'top 82%',
+          start: 'top 85%',
           toggleActions: 'play none none none',
         },
         opacity: 0,
-        y: 35,
+        y: 30,
         stagger: 0.12,
-        duration: 0.9,
+        duration: 0.85,
         ease: 'power2.out',
       });
     });
-
-    // Parallax suave na imagem do Chef
-    const chefImg = document.querySelector('.chef-portrait-img');
-    if (chefImg) {
-      gsap.to(chefImg, {
-        scrollTrigger: {
-          trigger: '#chef',
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: 1,
-        },
-        y: -25,
-        ease: 'none',
-      });
-    }
   }
 });

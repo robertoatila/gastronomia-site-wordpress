@@ -3,7 +3,7 @@ Theme Name: Markitos D'Oro
 Theme URI: https://github.com/robertoatila/gastronomia-site-wordpress
 Author: Chef Eduardo & Roberto Atila
 Description: Tema exclusivo de alta gastronomia italiana e bistro contemporaneo para o Markitos D'Oro. Inspirado na tradicao siciliana de 1936, com Lenis Smooth Scroll, GSAP, Tailwind CSS e design system nobre.
-Version: 1.1.0
+Version: 1.2.0
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 8.0
@@ -26,7 +26,7 @@ Text Domain: markitos-doro
 }
 
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior removido para evitar conflito de jitter com o Lenis */
   background-color: var(--bg-dark);
 }
 
@@ -37,6 +37,16 @@ body {
   overflow-x: hidden;
   margin: 0;
   padding: 0;
+}
+
+/* Compatibilidade perfeita com a Barra de Administracao do WordPress */
+.admin-bar header.fixed {
+  top: 32px !important;
+}
+@media screen and (max-width: 782px) {
+  .admin-bar header.fixed {
+    top: 46px !important;
+  }
 }
 
 .font-serif {
@@ -66,25 +76,24 @@ body {
 }
 
 .glass-nav {
-  background: rgba(11, 12, 14, 0.88);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(11, 12, 14, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
-/* Custom Gold Follower Cursor */
+/* Custom Gold Follower Cursor (Nao interfere em cliques) */
 .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
-  width: 24px;
-  height: 24px;
+  width: 26px;
+  height: 26px;
   border: 1.5px solid var(--gold-primary);
   border-radius: 50%;
   pointer-events: none;
   transform: translate(-50%, -50%);
-  transition: transform 0.15s ease-out, width 0.25s ease, height 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.12s ease-out, width 0.22s ease, height 0.22s ease, background-color 0.22s ease, border-color 0.22s ease;
   z-index: 9999;
-  mix-blend-mode: difference;
 }
 
 .custom-cursor-dot {
@@ -102,13 +111,13 @@ body {
 }
 
 .custom-cursor.hovering {
-  width: 48px;
-  height: 48px;
-  background-color: rgba(197, 160, 89, 0.15);
+  width: 46px;
+  height: 46px;
+  background-color: rgba(197, 160, 89, 0.14);
   border-color: var(--gold-light);
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar D'Oro */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -116,7 +125,7 @@ body {
   background: #0B0C0E;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2A261F;
+  background: #25221B;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {

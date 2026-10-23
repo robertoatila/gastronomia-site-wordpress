@@ -1,66 +1,76 @@
-<!-- Secao 2: O Chef Eduardo -->
+<!-- Secao 2: O Chef Eduardo (Foto com Cores Naturais e Vivas) -->
 <section id="chef" class="py-28 px-6 bg-dark border-t border-neutral-900 gsap-fade-section relative">
     <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
-        <!-- Coluna da Foto do Chef com Efeito Nobre -->
+        <!-- Coluna da Foto do Chef em CORES REAIS NATURAIS -->
         <div class="lg:col-span-5 gsap-fade-item">
-            <div class="relative p-2.5 border border-gold/40 bg-gradient-to-b from-[#181B21] to-dark-card shadow-2xl group">
-                <div class="overflow-hidden relative">
+            <div class="relative p-3 border border-gold/50 bg-gradient-to-b from-[#1c1f26] to-dark-card shadow-2xl rounded-sm group">
+                <!-- Brilho dourado de fundo -->
+                <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 via-transparent to-gold/20 blur-sm rounded-sm pointer-events-none"></div>
+
+                <div class="overflow-hidden relative rounded-sm">
+                    <!-- FOTO COM CORES ORIGINAIS VIBRANTES (Sem filtro preto e branco) -->
                     <img 
                         src="<?php echo esc_url(markitos_doro_get_chef_image()); ?>" 
-                        alt="Chef Eduardo do Restaurante Markitos D'Oro" 
-                        class="chef-portrait-img w-full h-[480px] object-cover grayscale contrast-125 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 ease-out"
+                        alt="Chef Eduardo preparando massa fresca na cozinha autêntica do Markitos D'Oro" 
+                        class="chef-portrait-img w-full h-[520px] object-cover object-center group-hover:scale-105 transition-all duration-700 ease-out"
                         loading="lazy"
                     >
-                    <!-- Selo sobreposto -->
-                    <div class="absolute bottom-4 left-4 bg-dark/90 backdrop-blur-md border border-gold/40 px-4 py-2">
-                        <span class="text-[10px] uppercase tracking-widest text-gold font-bold block">Chef de Cozinha</span>
-                        <span class="text-xs text-cream font-serif">Eduardo Markitos</span>
+                    <!-- Gradiente sutil inferior para legibilidade -->
+                    <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none"></div>
+
+                    <!-- Selo de identificação nobre -->
+                    <div class="absolute bottom-5 left-5 bg-dark/95 backdrop-blur-md border border-gold/60 px-5 py-3 shadow-lg">
+                        <span class="text-[10px] uppercase tracking-[0.25em] text-gold font-bold block">Chef de Cozinha & Proprietário</span>
+                        <span class="text-sm text-cream font-serif font-bold">Eduardo Markitos</span>
+                        <span class="text-[10px] text-neutral-400 block mt-0.5">10 Anos de Maestria nos Fogões</span>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Coluna da Biografia e Manifesto do Chef -->
+        <!-- Coluna da Biografia e Filosofia do Chef -->
         <div class="lg:col-span-7 space-y-6 gsap-fade-item">
             <div class="inline-flex items-center space-x-2">
                 <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="text-gold tracking-[0.25em] uppercase text-xs font-semibold">A Mente Criativa</span>
+                <span class="text-gold tracking-[0.25em] uppercase text-xs font-semibold">À Frente da Criação</span>
             </div>
             
-            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream">
-                Chef Eduardo
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold text-cream leading-tight">
+                Chef Eduardo: Paixão, Técnica e Raízes
             </h2>
             
-            <div class="flex items-center space-x-3 text-xs tracking-[0.2em] uppercase text-neutral-400">
+            <div class="flex flex-wrap items-center gap-3 text-xs tracking-[0.2em] uppercase text-neutral-400">
                 <span class="text-gold font-bold">40 Anos de Idade</span>
                 <span>&bull;</span>
-                <span>10 Anos à Frente dos Fogões</span>
+                <span class="text-cream">10 Anos Liderando Brigadas</span>
+                <span>&bull;</span>
+                <span class="text-neutral-400">Neto do Fundador Giuseppe</span>
             </div>
 
             <div class="w-16 h-[2px] bg-gold"></div>
 
             <p class="text-neutral-300 font-light leading-relaxed text-base sm:text-lg">
-                Com uma década dedicada à liderança culinária e uma vida inteira apaixonado pelos sabores da mesa, o Chef Eduardo combina a disciplina rigorosa das cozinhas contemporâneas com a memória afetiva das cozinhas de aldeia.
+                Com uma década inteira dedicada à liderança culinária e uma vida inteira apaixonado pelos aromas da mesa familiar, o Chef Eduardo combina a disciplina rigorosa das técnicas contemporâneas com a memória afetiva das aldeias da Sicília.
             </p>
 
             <p class="text-neutral-400 font-light leading-relaxed text-sm sm:text-base">
-                Entre o calor do forno tradicional a lenha e o frescor das ervas aromáticas colhidas no dia, Eduardo faz questão de selecionar pessoalmente cada fornecedor de sêmola, manteiga alpina e trufas frescas. Sua cozinha é autoral, limpa e profundamente ligada ao terroir mediterrâneo.
+                Entre o calor do forno tradicional a lenha e o perfume das ervas frescas colhidas no dia, Eduardo faz questão de selecionar pessoalmente cada produtor de sêmola, manteiga alpina e trufas negras. Para ele, cozinhar é um ato sagrado de acolhimento e identidade.
             </p>
 
-            <!-- Citacao Autografada do Chef -->
-            <blockquote class="border-l-2 border-gold pl-6 py-2 italic text-neutral-300 text-sm sm:text-base leading-relaxed bg-dark-card/50">
-                "O verdadeiro ouro de um prato não reside na extravagância visual, mas na pureza do ingrediente, no respeito ao tempo e no afeto impresso em cada detalhe que chega à sua mesa."
+            <!-- Citação com Assinatura em Destaque -->
+            <blockquote class="border-l-2 border-gold pl-6 py-4 italic text-neutral-200 text-sm sm:text-base leading-relaxed bg-dark-card/70 border border-neutral-800/80 rounded-r-sm">
+                "O verdadeiro ouro de um prato não reside no luxo aparente, mas no respeito sagrado ao tempo de cada alimento, na pureza da terra e no afeto genuíno que chega à mesa."
                 <span class="block text-gold text-xs not-italic uppercase tracking-widest font-semibold mt-3">
-                    &mdash; Chef Eduardo, Markitos D'Oro
+                    &mdash; Chef Eduardo, Restaurante Markitos D'Oro
                 </span>
             </blockquote>
 
-            <!-- Badges de Especialidade -->
+            <!-- Badges de Maestria Culinária -->
             <div class="pt-2 flex flex-wrap gap-2.5">
-                <span class="luxury-badge">Pasta Fatta a Mano</span>
-                <span class="luxury-badge">Maestro dei Tartufi</span>
-                <span class="luxury-badge">Cucina d'Autore</span>
-                <span class="luxury-badge">Carta DOCG</span>
+                <span class="luxury-badge">Pasta Fresca Fatta a Mano</span>
+                <span class="luxury-badge">Mestre dos Tartufos Italianos</span>
+                <span class="luxury-badge">Cozinha Autoral Siciliana</span>
+                <span class="luxury-badge">Carta DOCG Curada</span>
             </div>
         </div>
     </div>
