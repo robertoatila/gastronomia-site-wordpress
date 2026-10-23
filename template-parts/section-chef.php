@@ -1,18 +1,18 @@
-<!-- Secao 2: O Chef Eduardo (Foto com Cores Naturais e Vivas) -->
+<!-- Secao 2: O Chef Eduardo (Foto com Efeito Autoral de Revelacao) -->
 <section id="chef" class="py-28 px-6 bg-dark border-t border-neutral-900 gsap-fade-section relative">
     <div class="max-w-6xl mx-auto grid lg:grid-cols-12 gap-16 items-center">
-        <!-- Coluna da Foto do Chef em CORES REAIS NATURAIS -->
+        <!-- Coluna da Foto do Chef com Efeito Nobre (PB com revelacao de cores vibrantes no hover) -->
         <div class="lg:col-span-5 gsap-fade-item">
             <div class="relative p-3 border border-gold/50 bg-gradient-to-b from-[#1c1f26] to-dark-card shadow-2xl rounded-sm group">
                 <!-- Brilho dourado de fundo -->
-                <div class="absolute -inset-1 bg-gradient-to-r from-gold/20 via-transparent to-gold/20 blur-sm rounded-sm pointer-events-none"></div>
+                <div class="absolute -inset-1 bg-gradient-to-r from-gold/25 via-transparent to-gold/25 blur-sm rounded-sm pointer-events-none"></div>
 
                 <div class="overflow-hidden relative rounded-sm">
-                    <!-- FOTO COM CORES ORIGINAIS VIBRANTES (Sem filtro preto e branco) -->
+                    <!-- FOTO COM EFEITO CINEMATOGRAFICO: PB de alto contraste que se transforma em cores naturais e quentes ao passar o cursor -->
                     <img 
                         src="<?php echo esc_url(markitos_doro_get_chef_image()); ?>" 
                         alt="Chef Eduardo preparando massa fresca na cozinha autêntica do Markitos D'Oro" 
-                        class="chef-portrait-img w-full h-[520px] object-cover object-center group-hover:scale-105 transition-all duration-700 ease-out"
+                        class="chef-portrait-img w-full h-[520px] object-cover object-center grayscale contrast-125 group-hover:grayscale-0 group-hover:contrast-105 group-hover:scale-105 transition-all duration-700 ease-out"
                         loading="lazy"
                     >
                     <!-- Gradiente sutil inferior para legibilidade -->
