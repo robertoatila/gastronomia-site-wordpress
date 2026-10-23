@@ -1,50 +1,48 @@
-<!-- Secao 4: Atmosfera e Experiencia Sensorial -->
+<!-- Secao 4: A Experiencia no Salao (Intimismo, Silencio e Luz Suave) -->
 <section id="experiencia" class="py-28 px-6 bg-dark border-t border-neutral-900 gsap-fade-section relative overflow-hidden">
     <div class="max-w-6xl mx-auto space-y-16">
+        <!-- Cabecalho Editorial (Adeus 'Atmosfera' generica) -->
         <div class="text-center space-y-4 max-w-2xl mx-auto gsap-fade-item">
-            <div class="inline-flex items-center space-x-2">
-                <span class="w-2 h-2 rounded-full bg-gold"></span>
-                <span class="text-gold tracking-[0.25em] uppercase text-xs font-semibold">Atmosfera & Conforto</span>
-            </div>
+            <span class="text-gold tracking-[0.3em] uppercase text-xs font-semibold block">O Bistrô Contemporâneo</span>
             <h2 class="font-serif text-4xl sm:text-5xl font-bold text-cream">
-                Uma Noite de Imersão Intimista
+                Uma Experiência de Intimismo & Pausa
             </h2>
             <p class="text-neutral-400 font-light text-sm sm:text-base leading-relaxed">
-                Cada detalhe no Markitos D'Oro foi desenhado para desconectar você do ruído da cidade e transportá-lo a uma trattoria refinada de Palermo.
+                Cada detalhe no Markitos D'Oro foi desenhado para silenciar o ruído da cidade e transportá-lo a uma trattoria acolhedora de Palermo, onde a refeição é vivida sem pressa.
             </p>
         </div>
 
-        <!-- Grade de 4 Pilares da Experiencia -->
+        <!-- Grade Editorial dos Rituais da Casa -->
         <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div class="p-8 border border-neutral-800/80 bg-dark-card space-y-4 gold-glow-card gsap-fade-item">
-                <span class="text-gold font-serif text-3xl font-bold block">01</span>
-                <h4 class="font-serif text-xl font-bold text-cream">Luz de Velas & Madeira</h4>
+                <span class="text-gold font-serif text-2xl font-bold block">I. A Cozinha Aberta</span>
+                <h4 class="font-serif text-lg font-semibold text-cream">Fogo, Sêmola e Panela</h4>
                 <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                    Iluminação suave a meia-luz, mesas em carvalho rústico e louças de cerâmica esmaltada artesanalmente na Sicília.
+                    Da sua mesa, acompanhe o balé do Chef Eduardo abrindo as massas frescas na bancada e finalizando o aroma das trufas na frigideira de ferro.
                 </p>
             </div>
 
             <div class="p-8 border border-neutral-800/80 bg-dark-card space-y-4 gold-glow-card gsap-fade-item">
-                <span class="text-gold font-serif text-3xl font-bold block">02</span>
-                <h4 class="font-serif text-xl font-bold text-cream">Cozinha Viva & Visível</h4>
+                <span class="text-gold font-serif text-2xl font-bold block">II. Luz de Velas & Calma</span>
+                <h4 class="font-serif text-lg font-semibold text-cream">Ambiente Sem Ruído</h4>
                 <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                    Assista da sua mesa ao balé do Chef Eduardo abrindo as massas frescas na bancada de mármore e fatiando as trufas.
+                    Iluminação acolhedora a meia-luz, mesas em madeira nobre espaçadas para preservar suas conversas e louças esmaltadas da Sicília.
                 </p>
             </div>
 
             <div class="p-8 border border-neutral-800/80 bg-dark-card space-y-4 gold-glow-card gsap-fade-item">
-                <span class="text-gold font-serif text-3xl font-bold block">03</span>
-                <h4 class="font-serif text-xl font-bold text-cream">Adega Climatizada</h4>
+                <span class="text-gold font-serif text-2xl font-bold block">III. A Cave & Sommelier</span>
+                <h4 class="font-serif text-lg font-semibold text-cream">120 Rótulos DOCG</h4>
                 <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                    Mais de 120 rótulos exclusivamente italianos selecionados pelo nosso sommelier com foco em vinhos naturais e DOCG.
+                    Seleção criteriosa de produtores familiares da Itália: Barolos potentes, Brunellos elegantes e brancos minerais das encostas do Etna.
                 </p>
             </div>
 
             <div class="p-8 border border-neutral-800/80 bg-dark-card space-y-4 gold-glow-card gsap-fade-item">
-                <span class="text-gold font-serif text-3xl font-bold block">04</span>
-                <h4 class="font-serif text-xl font-bold text-cream">Poucas Mesas por Noite</h4>
+                <span class="text-gold font-serif text-2xl font-bold block">IV. Apenas 28 Lugares</span>
+                <h4 class="font-serif text-lg font-semibold text-cream">Serviço Dedicado</h4>
                 <p class="text-neutral-400 text-xs leading-relaxed font-light">
-                    Atendimento exclusivo com limitação rigorosa de clientes por turno para garantir silêncio, atenção e perfeição.
+                    Capacidade intencionalmente reduzida por turno. Aqui a sua mesa é sua durante toda a noite, sem nenhuma pressa de desocupação.
                 </p>
             </div>
         </div>

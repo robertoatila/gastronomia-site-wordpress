@@ -1,22 +1,22 @@
-/* Markitos D'Oro - Estilos Customizados de Luxo */
+/* Markitos D'Oro - Design System Editorial e Sobriedade */
 
 .gold-glow-card {
   position: relative;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gold-glow-card:hover {
-  border-color: rgba(197, 160, 89, 0.6);
-  box-shadow: 0 10px 30px -10px rgba(197, 160, 89, 0.15);
-  transform: translateY(-3px);
+  border-color: rgba(197, 160, 89, 0.5);
+  box-shadow: 0 12px 28px -8px rgba(197, 160, 89, 0.12);
+  transform: translateY(-2px);
 }
 
 .luxury-badge {
-  background: linear-gradient(135deg, rgba(197, 160, 89, 0.15) 0%, rgba(158, 125, 59, 0.25) 100%);
-  border: 1px solid rgba(197, 160, 89, 0.4);
+  background: rgba(197, 160, 89, 0.08);
+  border: 1px solid rgba(197, 160, 89, 0.35);
   color: #E7C986;
-  letter-spacing: 0.15em;
-  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
   font-weight: 600;
   text-transform: uppercase;
   padding: 4px 12px;
@@ -24,39 +24,28 @@
 }
 
 .signature-plate-banner {
-  background: linear-gradient(135deg, rgba(197, 160, 89, 0.12) 0%, rgba(20, 22, 26, 0.95) 50%, rgba(11, 12, 14, 0.98) 100%);
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.1) 0%, rgba(19, 21, 25, 0.96) 45%, rgba(11, 12, 14, 0.98) 100%);
   border: 1px solid rgba(197, 160, 89, 0.45);
   position: relative;
   overflow: hidden;
 }
 
-.signature-plate-banner::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(197, 160, 89, 0.08) 0%, transparent 60%);
-  pointer-events: none;
-}
-
 .menu-tab-btn {
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
   border-bottom: 2px solid transparent;
 }
 
 .menu-tab-btn.active {
-  color: #C5A059;
-  border-bottom-color: #C5A059;
+  color: #C5A059 !important;
+  border-bottom-color: #C5A059 !important;
 }
 
 .menu-item-fade {
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .menu-item-hidden {
   display: none !important;
   opacity: 0;
-  transform: scale(0.96);
+  transform: scale(0.97);
 }
