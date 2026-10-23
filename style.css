@@ -1,0 +1,124 @@
+/*
+Theme Name: Markitos D'Oro
+Theme URI: https://github.com/robertoatila/gastronomia-site-wordpress
+Author: Chef Eduardo & Roberto Atila
+Description: Tema exclusivo de alta gastronomia italiana e bistro contemporaneo para o Markitos D'Oro. Inspirado na tradicao siciliana de 1936, com Lenis Smooth Scroll, GSAP, Tailwind CSS e design system nobre.
+Version: 1.1.0
+Requires at least: 6.0
+Tested up to: 6.7
+Requires PHP: 8.0
+Text Domain: markitos-doro
+*/
+
+:root {
+  --bg-dark: #0B0C0E;
+  --bg-card: #131519;
+  --bg-card-hover: #1A1D23;
+  --bg-surface: #181A20;
+  --gold-primary: #C5A059;
+  --gold-light: #E7C986;
+  --gold-dark: #9E7D3B;
+  --gold-glow: rgba(197, 160, 89, 0.22);
+  --text-light: #F7F5F0;
+  --text-muted: #9E9EA7;
+  --text-dim: #6B7280;
+  --salvia: #2D4A3E;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-dark);
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.text-gold {
+  color: var(--gold-primary);
+}
+
+.border-gold {
+  border-color: var(--gold-primary);
+}
+
+.bg-gold {
+  background-color: var(--gold-primary);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #FFF3D1 0%, #E7C986 35%, #C5A059 70%, #9E7D3B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-gradient-border {
+  border-image: linear-gradient(135deg, #E7C986, #C5A059, #9E7D3B) 1;
+}
+
+.glass-nav {
+  background: rgba(11, 12, 14, 0.88);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Custom Gold Follower Cursor */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid var(--gold-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.15s ease-out, width 0.25s ease, height 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+  z-index: 9999;
+  mix-blend-mode: difference;
+}
+
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 5px;
+  background-color: var(--gold-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+  transition: opacity 0.2s ease;
+}
+
+.custom-cursor.hovering {
+  width: 48px;
+  height: 48px;
+  background-color: rgba(197, 160, 89, 0.15);
+  border-color: var(--gold-light);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0B0C0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A261F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
