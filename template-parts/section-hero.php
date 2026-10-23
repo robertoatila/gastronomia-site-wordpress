@@ -1,14 +1,14 @@
 <!-- Hero Section: Impacto e Primeira Impressao Editorial -->
-<section id="hero" class="min-h-[92vh] flex items-center justify-center relative px-6 pt-28 pb-20 overflow-hidden">
+<section id="hero" class="min-h-[92vh] flex items-center justify-center relative px-6 sm:px-8 pt-28 pb-20 overflow-hidden">
     <!-- Luz ambiente suave e intimista com tons de ouro e ambar -->
-    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.09)_0%,rgba(11,12,14,0.75)_50%,#0B0C0E_100%)] pointer-events-none"></div>
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(197,160,89,0.08)_0%,rgba(11,12,14,0.75)_50%,#0B0C0E_100%)] pointer-events-none"></div>
 
     <!-- Linhas arquitetonicas de enquadramento -->
     <div class="absolute top-1/3 left-12 w-px h-36 bg-gradient-to-b from-transparent via-gold/15 to-transparent hidden xl:block"></div>
     <div class="absolute bottom-1/3 right-12 w-px h-36 bg-gradient-to-b from-transparent via-gold/15 to-transparent hidden xl:block"></div>
 
     <div class="max-w-5xl mx-auto text-center relative z-10 space-y-8">
-        <!-- Eyebrow de Origem Nobre (Sem bolinhas genericas de IA) -->
+        <!-- Eyebrow de Origem Nobre -->
         <div class="hero-reveal inline-block">
             <span class="text-gold tracking-[0.35em] uppercase text-[11px] font-semibold border-b border-gold/30 pb-1.5">
                 Dal 1936 &bull; Tradição Siciliana &bull; Bistrô Contemporâneo
@@ -26,13 +26,13 @@
             Nascido no calor da Sicília e aperfeiçoado por três gerações. Uma experiência gastronômica intimista onde cada prato honra a pureza do ingrediente ouro: sêmola de trigo duro importada, trufas frescas e hospitalidade memorável.
         </p>
 
-        <!-- Botoes de Acao (CTAs) com Microinteracoes Nobres -->
+        <!-- Botoes de Acao (CTAs) -->
         <div class="hero-reveal pt-4 flex flex-col sm:flex-row justify-center items-center gap-5">
             <a href="#reservas" class="interactive-hover w-full sm:w-auto bg-gold hover:bg-yellow-500 text-black px-9 py-4 uppercase tracking-[0.2em] text-xs font-bold transition-all duration-300 shadow-xl shadow-gold/10">
                 Reservar Mesa VIP
             </a>
             <a href="#menu" class="interactive-hover w-full sm:w-auto border border-neutral-700 hover:border-gold text-cream hover:text-gold px-9 py-4 uppercase tracking-[0.2em] text-xs font-semibold transition-all duration-300">
-                Conhecer a Carta &rarr;
+                Ver o Cardápio &rarr;
             </a>
         </div>
 

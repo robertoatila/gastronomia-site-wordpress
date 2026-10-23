@@ -1,0 +1,31 @@
+# Markitos D'Oro — Regras e Diretrizes de Engenharia e Design
+
+## 1. Diretrizes de Design & Anti-Slop Visual
+- **Zero Elementos Clichês de IA:** É estritamente proibido adicionar bolinhas pulsantes (`animate-ping`, `animate-pulse`) ou pontinhos brilhantes como adorno genérico.
+- **Cursor Nativo do Navegador:** Nunca injetar bolinhas ou círculos magnéticos seguidores de cursor (`custom-cursor`). O cursor nativo do navegador é previsível, responsivo e profissional.
+- **Tipografia Editorial:**
+  - Títulos principais: `Playfair Display` (serifada nobre, com pesos 600, 700 e itálicos elegantes).
+  - Textos corridos: `Plus Jakarta Sans` (sem serifa, limpa, legível e moderna).
+  - Brasão e detalhes conceituais: `Cinzel Decorative`.
+- **Paleta de Cores Oficial:**
+  - Fundo & Nero Vulcano: `#0B0C0E` / `#060708`
+  - Superfícies de Cartões: `#131519` / `#1A1D23`
+  - Ouro Champanhe D'Oro: `#C5A059` (principal), `#E7C986` (luz), `#9E7D3B` (profundo)
+  - Textos & Creme Siciliano: `#F7F5F0` (leitura contrastante)
+  - Verde Sálvia & Manjericão: `#2D4A3E` (toques botânicos e selos)
+
+## 2. Padrões de Frontend & Responsividade
+- **Enquadramento do Cabeçalho:** O topo deve manter espaçamento equilibrado (logo à esquerda, links com padding generoso ao centro, e CTA único à direita). Nunca amontoar textos de horários ou telefones no menu principal.
+- **Navegação Sem Recarregamento:** O clique no logotipo ou em links de âncora (`#historia`, `#chef`, `#menu`, `#experiencia`, `#reservas`) NUNCA deve disparar um refresh/F5 de página. Deve acionar a rolagem suave via `lenis.scrollTo()`.
+- **Física do Scroll (Lenis):** Calibrado com duração máxima de `0.85s` e `syncTouch: false` para manter a resposta física nativa em dispositivos móveis.
+- **Fotografia Gastronômica:** Todo prato no cardápio deve possuir imagem nítida, apetitosa, com `loading="lazy"`, enquadramento `aspect-[16/10]` e zoom suave no hover.
+
+## 3. Arquitetura do Tema WordPress
+- Manter seções divididas em `template-parts/section-[nome].php`.
+- Carregamento de scripts e estilos centralizado em `functions.php`.
+- Suporte à barra administrativa do WordPress (`.admin-bar header.fixed { top: 32px; }`).
+
+## 4. Fluxo de Git e Deploy na AWS
+- **Ambiente Local:** Desenvolver e testar em `D:\gastronomia-site-wordpress`.
+- **Versionamento:** Enviar commits para a branch `main` do GitHub (`https://github.com/robertoatila/gastronomia-site-wordpress`).
+- **Produção na AWS:** Executar `sudo git pull origin main` no diretório `/var/www/html/wp-content/themes/markitos-doro`.

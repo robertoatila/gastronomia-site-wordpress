@@ -1,9 +1,9 @@
     <!-- Rodapé Editorial de Alto Padrão -->
-    <footer class="bg-dark-deep border-t border-neutral-900 pt-20 pb-12 px-6 text-neutral-400">
+    <footer class="bg-dark-deep border-t border-neutral-900 pt-20 pb-12 px-6 sm:px-8 lg:px-12 text-neutral-400">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-neutral-900/80">
             <!-- Coluna 1: Marca & Manifesto -->
             <div class="space-y-4">
-                <a href="#hero" class="scroll-to-top flex items-center space-x-3 group cursor-pointer inline-block" title="Voltar ao início">
+                <a href="#hero" class="scroll-to-top flex items-center space-x-3.5 group cursor-pointer inline-block" title="Voltar ao início">
                     <span class="w-8 h-8 rounded-full border border-gold/60 flex items-center justify-center font-cinzel text-gold text-xs group-hover:border-gold transition-colors">D</span>
                     <span class="font-serif text-xl tracking-widest text-cream uppercase font-bold group-hover:text-gold transition-colors">Markitos D'Oro</span>
                 </a>
@@ -28,7 +28,7 @@
                         <span class="text-cream">19:00 — 00:00</span>
                     </div>
                     <div class="flex justify-between border-b border-neutral-900 pb-1">
-                        <span>Almoço Executivo (Sáb/Dom)</span>
+                        <span>Almoço Fim de Semana</span>
                         <span class="text-cream">12:30 — 16:00</span>
                     </div>
                     <div class="flex justify-between">
@@ -56,7 +56,7 @@
                     Disponibilizamos nosso mezanino exclusivo para jantares harmonizados e eventos corporativos intimistas sob encomenda direta com o Chef Eduardo.
                 </p>
                 <div class="pt-2">
-                    <a href="#reservas" class="interactive-hover inline-block bg-neutral-900 hover:bg-gold hover:text-black border border-neutral-800 hover:border-gold text-cream text-[11px] uppercase tracking-widest px-4 py-2 font-medium transition-all">
+                    <a href="#reservas" class="inline-block bg-neutral-900 hover:bg-gold hover:text-black border border-neutral-800 hover:border-gold text-cream text-[11px] uppercase tracking-widest px-4 py-2 font-medium transition-all">
                         Consultar Mezanino &rarr;
                     </a>
                 </div>
@@ -67,10 +67,10 @@
         <div class="max-w-7xl mx-auto pt-8 flex flex-col md:flex-row items-center justify-between text-[11px] text-neutral-600 space-y-4 md:space-y-0">
             <p>&copy; <?php echo date('Y'); ?> Markitos D'Oro. Todos os direitos reservados. Tradição Siciliana desde 1936.</p>
             <div class="flex space-x-6 text-neutral-500">
-                <a href="#historia" class="hover:text-gold transition-colors">A Casa</a>
+                <a href="#historia" class="hover:text-gold transition-colors">Origem</a>
                 <a href="#chef" class="hover:text-gold transition-colors">Chef Eduardo</a>
                 <a href="#menu" class="hover:text-gold transition-colors">Cardápio</a>
-                <a href="#hero" class="scroll-to-top hover:text-gold transition-colors font-medium">Voltar ao Topo &uarr;</a>
+                <a href="#hero" class="scroll-to-top hover:text-gold transition-colors font-medium cursor-pointer">Voltar ao Topo &uarr;</a>
             </div>
         </div>
     </footer>

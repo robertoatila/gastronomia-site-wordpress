@@ -38,39 +38,32 @@
 </head>
 <body <?php body_class('bg-dark text-cream antialiased selection:bg-gold selection:text-black'); ?>>
 
-    <!-- Custom Follower Cursor -->
-    <div id="custom-cursor" class="custom-cursor hidden md:block"></div>
-    <div id="custom-cursor-dot" class="custom-cursor-dot hidden md:block"></div>
-
-    <!-- Navegacao Superior de Alto Padrao -->
+    <!-- Navegacao Superior com Enquadramento Perfeito -->
     <header class="fixed top-0 left-0 w-full z-50 glass-nav border-b border-neutral-900/80 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <!-- Logotipo: Clicar nele faz transição suave até o topo sem dar F5 / reload -->
-            <a href="#hero" id="site-logo-link" class="scroll-to-top flex items-center space-x-3 group cursor-pointer" title="Voltar ao início">
-                <span class="w-9 h-9 rounded-full border border-gold/60 flex items-center justify-center font-cinzel text-gold text-sm group-hover:border-gold group-hover:bg-gold/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+            <!-- Logotipo: Clicar nele executa deslize suave ao topo sem recarregar a pagina -->
+            <a href="#hero" id="site-logo-link" class="scroll-to-top flex items-center space-x-3.5 group cursor-pointer" title="Voltar ao início">
+                <span class="w-10 h-10 rounded-full border border-gold/60 flex items-center justify-center font-cinzel text-gold text-base group-hover:border-gold group-hover:bg-gold/10 transition-all duration-300">
                     D
                 </span>
                 <div class="flex flex-col">
-                    <span class="font-serif text-xl tracking-[0.2em] text-cream uppercase font-bold group-hover:text-gold transition-colors">Markitos D'Oro</span>
-                    <span class="text-[9px] tracking-[0.3em] uppercase text-gold/80 font-medium -mt-0.5">Trattoria & Bistrô Siciliano &bull; 1936</span>
+                    <span class="font-serif text-lg sm:text-xl tracking-[0.18em] text-cream uppercase font-bold group-hover:text-gold transition-colors">Markitos D'Oro</span>
+                    <span class="text-[9px] tracking-[0.28em] uppercase text-gold/75 font-medium -mt-0.5">Trattoria Siciliana &bull; 1936</span>
                 </div>
             </a>
 
-            <!-- Links de Navegacao Editorial Desktop -->
-            <nav class="hidden lg:flex items-center space-x-8 text-xs tracking-[0.25em] uppercase font-semibold text-neutral-300">
-                <a href="#historia" class="hover:text-gold transition-colors py-2">A Casa & Origem</a>
+            <!-- Links de Navegacao Desktop (Espacamento generoso e equilibrado) -->
+            <nav class="hidden lg:flex items-center space-x-7 xl:space-x-9 text-xs tracking-[0.22em] uppercase font-semibold text-neutral-300">
+                <a href="#historia" class="hover:text-gold transition-colors py-2">Origem 1936</a>
                 <a href="#chef" class="hover:text-gold transition-colors py-2">Chef Eduardo</a>
-                <a href="#menu" class="hover:text-gold transition-colors py-2">Cardápio Autoral</a>
+                <a href="#menu" class="hover:text-gold transition-colors py-2">Cardápio</a>
                 <a href="#experiencia" class="hover:text-gold transition-colors py-2">A Experiência</a>
                 <a href="#reservas" class="hover:text-gold transition-colors py-2">Reservas</a>
             </nav>
 
-            <!-- Atendimento & CTA Desktop -->
-            <div class="hidden sm:flex items-center space-x-5">
-                <span class="hidden xl:inline-block text-[11px] uppercase tracking-wider text-neutral-400 font-light border-r border-neutral-800 pr-5">
-                    Terça a Domingo &bull; 19h às 23h30
-                </span>
-                <a href="#reservas" class="interactive-hover border border-gold/80 text-gold hover:bg-gold hover:text-black px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300">
+            <!-- CTA Desktop (Sem textos amontoados) -->
+            <div class="hidden sm:flex items-center">
+                <a href="#reservas" class="border border-gold/70 text-gold hover:bg-gold hover:text-black px-6 py-2.5 text-xs uppercase tracking-[0.2em] font-semibold transition-all duration-300 shadow-sm shadow-gold/10">
                     Reservar Mesa
                 </a>
             </div>
@@ -86,11 +79,11 @@
         <!-- Menu Mobile Drawer -->
         <div id="mobile-menu-drawer" class="hidden lg:hidden bg-dark-card border-b border-neutral-800 px-6 py-6 space-y-4">
             <nav class="flex flex-col space-y-4 text-sm tracking-widest uppercase font-medium text-neutral-300">
-                <a href="#historia" class="hover:text-gold">A Casa & Origem</a>
-                <a href="#chef" class="hover:text-gold">Chef Eduardo</a>
-                <a href="#menu" class="hover:text-gold">Cardápio Autoral</a>
-                <a href="#experiencia" class="hover:text-gold">A Experiência</a>
-                <a href="#reservas" class="hover:text-gold">Reservas</a>
+                <a href="#historia" class="hover:text-gold py-1">Origem 1936</a>
+                <a href="#chef" class="hover:text-gold py-1">Chef Eduardo</a>
+                <a href="#menu" class="hover:text-gold py-1">Cardápio</a>
+                <a href="#experiencia" class="hover:text-gold py-1">A Experiência</a>
+                <a href="#reservas" class="hover:text-gold py-1">Reservas</a>
             </nav>
             <div class="pt-4 border-t border-neutral-800">
                 <a href="#reservas" class="block text-center bg-gold text-black px-6 py-3 text-xs uppercase tracking-widest font-bold">

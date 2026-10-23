@@ -2,8 +2,8 @@
 Theme Name: Markitos D'Oro
 Theme URI: https://github.com/robertoatila/gastronomia-site-wordpress
 Author: Chef Eduardo & Roberto Atila
-Description: Tema exclusivo de alta gastronomia italiana e bistro contemporaneo para o Markitos D'Oro. Inspirado na tradicao siciliana de 1936, com Lenis Smooth Scroll, GSAP, Tailwind CSS e design system nobre.
-Version: 1.2.0
+Description: Tema exclusivo de alta gastronomia italiana e bistrô contemporâneo para o Markitos D'Oro. Inspirado na tradição siciliana de 1936, com Lenis Smooth Scroll, GSAP, Tailwind CSS e design system editorial nobre.
+Version: 1.3.0
 Requires at least: 6.0
 Tested up to: 6.7
 Requires PHP: 8.0
@@ -26,8 +26,10 @@ Text Domain: markitos-doro
 }
 
 html {
-  /* scroll-behavior removido para evitar conflito de jitter com o Lenis */
   background-color: var(--bg-dark);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -39,7 +41,7 @@ body {
   padding: 0;
 }
 
-/* Compatibilidade perfeita com a Barra de Administracao do WordPress */
+/* Compatibilidade perfeita com a barra administrativa do WordPress */
 .admin-bar header.fixed {
   top: 32px !important;
 }
@@ -71,53 +73,13 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.gold-gradient-border {
-  border-image: linear-gradient(135deg, #E7C986, #C5A059, #9E7D3B) 1;
-}
-
 .glass-nav {
-  background: rgba(11, 12, 14, 0.92);
+  background: rgba(11, 12, 14, 0.94);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
 
-/* Custom Gold Follower Cursor (Nao interfere em cliques) */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 26px;
-  height: 26px;
-  border: 1.5px solid var(--gold-primary);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  transition: transform 0.12s ease-out, width 0.22s ease, height 0.22s ease, background-color 0.22s ease, border-color 0.22s ease;
-  z-index: 9999;
-}
-
-.custom-cursor-dot {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 5px;
-  background-color: var(--gold-primary);
-  border-radius: 50%;
-  pointer-events: none;
-  transform: translate(-50%, -50%);
-  z-index: 10000;
-  transition: opacity 0.2s ease;
-}
-
-.custom-cursor.hovering {
-  width: 46px;
-  height: 46px;
-  background-color: rgba(197, 160, 89, 0.14);
-  border-color: var(--gold-light);
-}
-
-/* Custom Scrollbar D'Oro */
+/* Custom Scrollbar Editorial */
 ::-webkit-scrollbar {
   width: 8px;
 }

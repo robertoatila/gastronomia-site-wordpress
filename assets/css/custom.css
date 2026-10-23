@@ -1,31 +1,28 @@
-/* Markitos D'Oro - Design System Editorial e Sobriedade */
+/* Markitos D'Oro - Design System Editorial e Cardápio com Fotos */
 
-.gold-glow-card {
+.dish-card {
   position: relative;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: var(--bg-card);
 }
 
-.gold-glow-card:hover {
-  border-color: rgba(197, 160, 89, 0.5);
-  box-shadow: 0 12px 28px -8px rgba(197, 160, 89, 0.12);
-  transform: translateY(-2px);
+.dish-card:hover {
+  border-color: rgba(197, 160, 89, 0.55);
+  box-shadow: 0 16px 36px -12px rgba(197, 160, 89, 0.14);
+  transform: translateY(-3px);
 }
 
-.luxury-badge {
-  background: rgba(197, 160, 89, 0.08);
-  border: 1px solid rgba(197, 160, 89, 0.35);
-  color: #E7C986;
-  letter-spacing: 0.18em;
-  font-size: 0.68rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  padding: 4px 12px;
-  display: inline-block;
+.dish-card img {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.dish-card:hover img {
+  transform: scale(1.04);
 }
 
 .signature-plate-banner {
-  background: linear-gradient(135deg, rgba(197, 160, 89, 0.1) 0%, rgba(19, 21, 25, 0.96) 45%, rgba(11, 12, 14, 0.98) 100%);
-  border: 1px solid rgba(197, 160, 89, 0.45);
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.12) 0%, rgba(20, 22, 27, 0.98) 45%, rgba(11, 12, 14, 0.99) 100%);
+  border: 1px solid rgba(197, 160, 89, 0.5);
   position: relative;
   overflow: hidden;
 }
@@ -33,6 +30,7 @@
 .menu-tab-btn {
   transition: all 0.25s ease;
   border-bottom: 2px solid transparent;
+  cursor: pointer;
 }
 
 .menu-tab-btn.active {
@@ -48,4 +46,16 @@
   display: none !important;
   opacity: 0;
   transform: scale(0.97);
+}
+
+.luxury-tag {
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #E7C986;
+  background: rgba(197, 160, 89, 0.08);
+  border: 1px solid rgba(197, 160, 89, 0.3);
+  padding: 3px 10px;
+  display: inline-block;
+  font-weight: 600;
 }
