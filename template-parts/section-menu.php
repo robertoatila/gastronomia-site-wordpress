@@ -1,5 +1,5 @@
 <!-- Secao 3: Cardapio Autoral com Fotos de Alta Gastronomia -->
-<section id="menu" class="py-20 sm:py-24 lg:py-28 px-6 sm:px-8 lg:px-12 bg-[#0E1013] border-t border-neutral-900 gsap-fade-section">
+<section id="menu" class="py-16 sm:py-20 lg:py-24 px-6 sm:px-8 lg:px-12 bg-[#0E1013] border-t border-neutral-900 gsap-fade-section scroll-mt-20">
     <div class="max-w-7xl mx-auto space-y-14">
         <!-- Cabecalho Editorial do Cardapio -->
         <div class="text-center space-y-4 max-w-2xl mx-auto gsap-fade-item">

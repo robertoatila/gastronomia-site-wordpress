@@ -3,7 +3,7 @@
  * Markitos D'Oro - Funcoes e Definicoes do Tema
  *
  * @package Markitos_DOro
- * @version 1.5.0
+ * @version 1.6.0
  */
 
 if (!defined('ABSPATH')) {
@@ -15,11 +15,11 @@ if (!defined('ABSPATH')) {
  */
 function markitos_doro_enqueue_scripts() {
     // 1. Folha de estilos padrao do tema
-    wp_enqueue_style('markitos-doro-theme-style', get_stylesheet_uri(), array(), '1.5.0');
+    wp_enqueue_style('markitos-doro-theme-style', get_stylesheet_uri(), array(), '1.6.0');
 
     // 2. Estilos personalizados complementares
     if (file_exists(get_template_directory() . '/assets/css/custom.css')) {
-        wp_enqueue_style('markitos-doro-custom-css', get_template_directory_uri() . '/assets/css/custom.css', array('markitos-doro-theme-style'), '1.5.0');
+        wp_enqueue_style('markitos-doro-custom-css', get_template_directory_uri() . '/assets/css/custom.css', array('markitos-doro-theme-style'), '1.6.0');
     }
 
     // 3. Google Fonts: Playfair Display + Plus Jakarta Sans + Cinzel Decorative

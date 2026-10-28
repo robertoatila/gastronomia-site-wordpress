@@ -1,5 +1,5 @@
 <!-- Secao 4: A Experiencia no Salao (Intimismo, Silencio e Luz Suave) -->
-<section id="experiencia" class="py-28 px-6 bg-dark border-t border-neutral-900 gsap-fade-section relative overflow-hidden">
+<section id="experiencia" class="py-16 sm:py-20 lg:py-24 px-6 bg-dark border-t border-neutral-900 gsap-fade-section relative overflow-hidden scroll-mt-20">
     <div class="max-w-6xl mx-auto space-y-16">
         <!-- Cabecalho Editorial (Adeus 'Atmosfera' generica) -->
         <div class="text-center space-y-4 max-w-2xl mx-auto gsap-fade-item">

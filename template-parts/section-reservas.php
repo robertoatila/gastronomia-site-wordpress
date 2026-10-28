@@ -1,5 +1,5 @@
 <!-- Secao 5: Reservas VIP e Contato -->
-<section id="reservas" class="py-28 px-6 bg-[#0E1013] border-t border-neutral-900 gsap-fade-section">
+<section id="reservas" class="py-16 sm:py-20 lg:py-24 px-6 bg-[#0E1013] border-t border-neutral-900 gsap-fade-section scroll-mt-20">
     <div class="max-w-4xl mx-auto space-y-12">
         <div class="text-center space-y-4 gsap-fade-item">
             <div class="inline-flex items-center space-x-2">

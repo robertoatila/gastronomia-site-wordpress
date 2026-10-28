@@ -1,5 +1,5 @@
 <!-- Secao 1: A Casa, O Legado Siciliano e a Trajetoria (1936 até Hoje) -->
-<section id="historia" class="py-28 px-6 bg-[#0E1013] border-t border-neutral-900 relative gsap-fade-section">
+<section id="historia" class="py-16 sm:py-20 lg:py-24 px-6 bg-[#0E1013] border-t border-neutral-900 relative gsap-fade-section scroll-mt-20">
     <div class="max-w-6xl mx-auto space-y-20">
         <!-- Parte Superior: Narrativa & Manifesto da Casa -->
         <div class="grid lg:grid-cols-12 gap-16 items-center">
